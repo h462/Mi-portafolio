@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -61,7 +62,7 @@ body {
     transform: scale(1.05);
 }
 
-/* Hero Section */
+
 .hero {
     display: flex;
     justify-content: space-between;
@@ -126,7 +127,7 @@ body {
     padding: 10px;
 }
 
-/* Section */
+/* Seccion */
 section {
     padding: 80px 50px;
 }
@@ -138,7 +139,7 @@ section {
     color: #a4d65e;
 }
 
-/* Who Am I Section */
+/* Quien soy? */
 .who-am-i {
     display: flex;
     gap: 50px;
@@ -182,7 +183,7 @@ section {
     font-size: 12px;
 }
 
-/* Skills Section */
+/* Seccion de habilidades */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -228,7 +229,7 @@ section {
     margin-bottom: 10px;
 }
 
-/* Additional Skills Section */
+/* Habilidades Adicionales  */
 .additional-skills {
     text-align: center;
 }
@@ -253,7 +254,7 @@ section {
     transform: scale(1.1) rotateY(10deg);
 }
 
-/* Projects Section */
+/* Seccion de proyectos */
 .projects {
     background: rgba(15, 23, 41, 0.5);
 }
@@ -295,7 +296,7 @@ section {
     border-color: #a4d65e;
 }
 
-/* Contact Section */
+/* Seccion de contactos */
 .contact {
     text-align: center;
 }
@@ -370,7 +371,7 @@ section {
     box-shadow: 0 10px 25px rgba(164, 214, 94, 0.3);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
