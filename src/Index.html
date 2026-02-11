@@ -1,0 +1,152 @@
+<!--mi-proyecto-tailwind/
+├── src/
+│   ├── input.css
+│   └── index.html
+├── dist/
+│   └── output.css (generado)
+├── tailwind.config.js
+└── package.json -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huascar - Desarrollador Web</title>
+    <link rel="stylesheet" href="input.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">H</div>
+        <ul class="nav-links">
+            <li><a href="#about">ACERCA DE MI</a></li>
+            <li><a href="#skills">HABILIDADES</a></li>
+            <li><a href="#projects">PROYECTOS </a></li>
+            <li><button class="contact-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">CONTACTO</button></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SOY <span>Huascar</span><br>Full Stack Developer</h1>
+            <p>Desarrollador web especializado en crear experiencias digitales modernas y funcionales. Con pasión por la tecnología y años de experiencia en desarrollo web.</p>
+            <button class="hero-btn">MOSTRAR MIS PROYECTOS</button>
+        </div>
+        <div class="hero-images">
+            <div class="hero-img">Foto</div>
+            <div class="hero-img">Foto</div>
+        </div>
+    </section>
+
+    <!-- Who Am I Section -->
+    <section id="about">
+        <div class="who-am-i">
+            <div class="who-am-i-content">
+                <h2>¿QUIÉN SOY?</h2>
+                <p>Soy un full-stack developer especializado en TypeScript, React, Node.js y más. Apasionado por crear soluciones web innovadoras.</p>
+                <p>La programación es mi pasión. Por eso estoy trabajando mientras continúo con mi carrera académica..</p>
+                <p>Además, me gusta jugar juegos de PC y leer libros de cuentos en mi tiempo libre, lo cual es divertido y relajante.</p>
+                <button class="hero-btn" style="margin-top: 20px;">MOSTRAR MIS PROYECTOS</button>
+            </div>
+            <div class="who-am-i-images">
+                <div class="who-am-i-img">Foto 1</div>
+                <div class="who-am-i-img">Foto 2</div>
+                <div class="who-am-i-img">Foto 3</div>
+                <div class="who-am-i-img">Foto 4</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">MIS HABILIDADES</h2>
+        <div class="skills-grid">
+            <div class="skill-box">
+                <div class="skill-icon">📕</div>
+                <p>HTML5</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-icon">🎨</div>
+                <p>CSS3</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-icon">☕</div>
+                <p>JavaScript</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-icon">⚛️</div>
+                <p>React</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-icon">📝</div>
+                <p>Next.js</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-icon">🟢</div>
+                <p>Node.js</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-icon">🌊</div>
+                <p>Tailwind</p>
+            </div>
+            <div class="skill-box">
+                <div class="skill-icon">🍃</div>
+                <p>MongoDB</p>
+            </div>
+        </div>
+        <div class="experience-box">
+            <h3>4</h3>
+            <p>Años<br>De Experiencia<br>Trabajando</p>
+            <button class="hero-btn" style="margin-top: 15px;">DESCARGAR MI CV</button>
+        </div>
+    </section>
+
+    <!-- Additional Skills Section -->
+    <section class="additional-skills">
+        <h2 class="section-title">HABILIDADES ADICIONALES</h2>
+        <div class="skills-icons">
+            <div class="skill-icon-lg">🔷</div>
+            <div class="skill-icon-lg">⚡</div>
+            <div class="skill-icon-lg">🐙</div>
+            <div class="skill-icon-lg">🦊</div>
+            <div class="skill-icon-lg">📦</div>
+            <div class="skill-icon-lg">🎭</div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="projects-content">
+            <div class="projects-text">
+                <h2>LAS OBRAS</h2><br>QUE MAS<br>ME APASIONAN</h2>
+                <button class="hero-btn" style="margin-top: 30px;">MOSTRAR MIS PROYECTOS</button>
+            </div>
+            <div class="projects-gallery">
+                <div class="project-card">Proyecto 1</div>
+                <div class="project-card">Proyecto 2</div>
+                <div class="project-card">Proyecto 3</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-form">
+            <h2>CONTACTAME</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="TU NOMBRE" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="CORREO ELECTRÓNICO" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="ESCRIBE TU MENSAJE"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar aqui</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
