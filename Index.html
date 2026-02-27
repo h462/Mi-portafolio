@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huascar - Desarrollador Web</title>
     <link rel="stylesheet" href="input.css">
+    <script src="habilidades.js" defer></script>
 </head>
 <body>
     
     <nav class="navbar">
         <div class="logo">H</div>
+        <button class="menu-toggle" aria-label="Abrir menú">☰</button>
         <ul class="nav-links">
             <li><a href="#about">ACERCA DE MI</a></li>
             <li><a href="#skills">HABILIDADES</a></li>
-            <li><a href="#projects">PROYECTOS </a></li>
+            <li><a href="proyectos.html">PROYECTOS</a></li>
             <li><button class="contact-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">CONTACTO</button></li>
         </ul>
     </nav>
@@ -51,40 +53,17 @@
     
     <section id="skills">
         <h2 class="section-title">MIS HABILIDADES</h2>
-        <div class="skills-grid">
-            <div class="skill-box">
-                <div class="skill-icon">📕</div>
-                <p>HTML5</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-icon">🎨</div>
-                <p>CSS3</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-icon">☕</div>
-                <p>JavaScript</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-icon">⚛️</div>
-                <p>React</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-icon">📝</div>
-                <p>Next.js</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-icon">🟢</div>
-                <p>Node.js</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-icon">🌊</div>
-                <p>Tailwind</p>
-            </div>
-            <div class="skill-box">
-                <div class="skill-icon">🍃</div>
-                <p>MongoDB</p>
-            </div>
-        </div>
+        <div id="habilidades" class="skills-grid"></div>
+                <script>
+                // Toggle menú
+                document.addEventListener('DOMContentLoaded', function() {
+                    const toggle = document.querySelector('.menu-toggle');
+                    const navLinks = document.querySelector('.nav-links');
+                    toggle.addEventListener('click', function() {
+                        navLinks.classList.toggle('open');
+                    });
+                });
+                </script>
         <div class="experience-box">
             <h3>4</h3>
             <p>Años<br>De Experiencia<br>Trabajando</p>
@@ -120,19 +99,33 @@
     <section id="contact" class="contact">
         <div class="contact-form">
             <h2>CONTACTAME</h2>
-            <form>
+            <form id="contactForm">
                 <div class="form-group">
-                    <input type="text" placeholder="TU NOMBRE" required>
+                    <input type="text" id="nombre" placeholder="TU NOMBRE" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" placeholder="CORREO ELECTRÓNICO" required>
+                    <input type="email" id="correo" placeholder="CORREO ELECTRÓNICO" required>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="ESCRIBE TU MENSAJE"></textarea>
+                    <textarea id="mensaje" placeholder="ESCRIBE TU MENSAJE" required></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Enviar aqui</button>
             </form>
         </div>
     </section>
 </body>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const correo = document.getElementById('correo').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+    if (!nombre || !correo || !mensaje) {
+        alert('Por favor, completa todos los campos.');
+        return;
+    }
+    const mailto = `mailto:huascar@email.com?subject=Contacto%20desde%20portafolio&body=Nombre:%20${encodeURIComponent(nombre)}%0ACorreo:%20${encodeURIComponent(correo)}%0AMensaje:%20${encodeURIComponent(mensaje)}`;
+    window.location.href = mailto;
+});
+</script>
 </html>
